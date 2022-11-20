@@ -1,0 +1,47 @@
+<%- include('../../fragments/header.ejs') %> 
+
+    <main>
+        <h2>New Visit</h2>
+        <form class="form" novalidate onsubmit="return validateVisitForm();">
+            <label for="DoctorName">Doctor Name:<span class="symbol-required">*</span></label>
+            <select name="DoctorName" id="DoctorName" required>
+                <option value="" disabled selected>Select Doctor</option>
+                <option value="Doctor1">Jan Kowalski</option>
+                <option value="Doctor2">Adam Nowak</option>
+                <option value="Doctor3">Anna Marchewka</option>
+            </select>
+            <span id="errorDoctorName" class="errors-text"></span>
+           
+            <label for="PatientName">Patient Name:<span class="symbol-required">*</span></label>
+            <select name="PatientName" id="PatientName" required>
+                <option value="" disabled selected>Select Patient</option>
+                <option value="Patient1">Mateusz Gruszka</option>
+                <option value="Patient2">Marta Pomdor</option>
+                <option value="Patient3">Paweł Arbuz</option>
+            </select>
+            <span id="errorPatientName" class="errors-text"></span>
+           
+            <label for="visitDate">Visit Date:<span class="symbol-required">*</span></label>
+            <input type="date" name="visitDate" id="visitDate" required>
+            <span id="errorVisitDate" class="errors-text"></span>
+
+            <label for="payer">Payer:<span class="symbol-required">*</span></label>
+            <select name="payer" id="payer" required>
+                <option value="" disabled selected>Select payer type</option>
+                <option value="NFZ">NFZ</option>
+                <option value="Insurer">Insurer</option>
+                <option value="PrivateVisit">Private Visit</option>
+            </select>
+            <span id="errorPayer" class="errors-text"></span>
+           
+            <div class="form-buttons">
+                <p id="errorsSummary" class="errors-text"></p>
+                <input type="submit" value="Add New Visit" class="form-button-submit">
+                <a href="/" class="form-button-cancel">Cancel</a>
+            </div>   
+        </form>
+    </main>
+    <script type="application/javascript" src="/js/validationCommon.js"></script>
+	<script type="application/javascript" src="/js/validationVisitForm.js"></script>
+
+<%- include('../../fragments/footer.ejs') %>

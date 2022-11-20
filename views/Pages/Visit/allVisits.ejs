@@ -1,0 +1,68 @@
+<%- include('../../fragments/header.ejs') %>
+
+    <main>
+        <h2>All Visits</h2>
+        <table class="table-list">
+            <thead>
+                <tr>
+                    <th>Doctor</th>
+                    <th>Specjalization</th>
+                    <th>Patient</th>
+                    <th>Visit Date</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Jan Kowalski</td>
+                    <td>Kardiolog</td>
+                    <td>Adam Ogórek</td>
+                    <td>15.11.2022</td>
+                    <td>
+                        <ul class="list-actions">
+                            <li>
+                                <a href="/Pages/Visit/visitDetails.html" class="list-actions-button-details">Details</a>
+                                <a href="/Pages/Visit/visitFormEdit.html" class="list-actions-button-edit">Edit</a>
+                                <a href="/Pages/Visit/visitRemove.html" class="list-actions-button-delete">Remove</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Adam Nowak</td>
+                    <td>Okulista</td>
+                    <td>Agnieszka Pietruszka</td>
+                    <td>30.11.2022</td>
+                    <td>
+                        <ul class="list-actions">
+                            <li>
+                                <a href="/Pages/Visit/visitDetails.html" class="list-actions-button-details">Details</a>
+                                <a href="/Pages/Visit/visitFormEdit.html" class="list-actions-button-edit">Edit</a>
+                                <a href="/Pages/Visit/visitRemove.html" class="list-actions-button-delete">Remove</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Anna Marchewka</td>
+                    <td>Pediatra</td>
+                    <td>Antoni Porzeczka</td>
+                    <td>23.01.2023</td>
+                    <td>
+                        <ul class="list-actions">
+                            <li>
+                                <a href="/Pages/Visit/visitDetails.html" class="list-actions-button-details">Details</a>
+                                <a href="/Pages/Visit/visitFormEdit.html" class="list-actions-button-edit">Edit</a>
+                                <a href="/Pages/Visit/visitRemove.html" class="list-actions-button-delete">Remove</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            <a href="visits/add" class="button-add">Add Visit</a>
+        </p>
+    </main>
+
+<%- include('../../fragments/footer.ejs') %>

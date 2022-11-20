@@ -1,0 +1,45 @@
+<%- include('../../fragments/header.ejs') %>
+
+    <main>
+        <h2>Edit Visit</h2>
+        <form class="form" action="/Pages/Visit/visitEditedMessage.html">
+            <label for="DoctorName">Doctor Name:<span class="symbol-required">*</span></label>
+            <select name="DoctorName" id="DoctorName" required>
+                <option>Select Doctor</option>
+                <option value="Doctor1"selected>Jan Kowalski</option>
+                <option value="Doctor2">Adam Nowak</option>
+                <option value="Doctor3">Anna Marchewka</option>
+            </select>
+            <span id="errorDoctorName" class="errors-text"></span>
+           
+            <label for="PatientName">Patient Name:<span class="symbol-required">*</span></label>
+            <select name="PatientName" id="PatientName" required>
+                <option>Select Patient</option>
+                <option value="Patient1" selected>Mateusz Gruszka</option>
+                <option value="Patient2">Marta Pomdor</option>
+                <option value="Patient3">Paweł Arbuz</option>
+            </select>
+            <span id="errorPatientName" class="errors-text"></span>
+           
+            <label for="visitDate">Visit Date:<span class="symbol-required">*</span></label>
+            <input type="date" name="visitDate" id="visitDate" value="2022-12-11" required>
+            <span id="errorVisitDate" class="errors-text"></span>
+
+            <label for="payer">Payer:<span class="symbol-required">*</span></label>
+            <select name="payer" id="payer" required>
+                <option>Select payer type</option>
+                <option value="NFZ" selected>NFZ</option>
+                <option value="Insurer">Insurer</option>
+                <option value="PrivateVisit">Private Visit</option>
+            </select>
+            <span id="errorPayer" class="errors-text"></span>
+
+            <div class="form-buttons">
+                <p id="errorsSummary"></p>
+                <input type="submit" value="Save Visit" class="form-button-submit">
+                <a href="/Pages/Visit/allVisits.html" class="form-button-cancel">Cancel</a>
+            </div>   
+        </form>
+    </main>
+
+<%- include('../../fragments/footer.ejs') %>

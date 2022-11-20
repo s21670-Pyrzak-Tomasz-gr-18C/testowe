@@ -1,0 +1,64 @@
+<%- include('../../fragments/header.ejs') %>
+
+    <main>
+        <h2>All Doctors</h2>
+        <table class="table-list">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Specjalization</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Jan</td>
+                    <td>Kowalski</td>
+                    <td>Kardiolog</td>
+                    <td>
+                        <ul class="list-actions">
+                            <li>
+                                <a href="doctors/details/1" class="list-actions-button-details">Details</a>
+                                <a href="/Pages/Doctor/doctorFormEdit.html" class="list-actions-button-edit">Edit</a>
+                                <a href="/Pages/Doctor/doctorRemove.html" class="list-actions-button-delete">Remove</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Adam</td>
+                    <td>Nowak</td>
+                    <td>Okulista</td>
+                    <td>
+                        <ul class="list-actions">
+                            <li>
+                                <a href="doctors/details/2" class="list-actions-button-details">Details</a>
+                                <a href="/Pages/Doctor/doctorFormEdit.html" class="list-actions-button-edit">Edit</a>
+                                <a href="/Pages/Doctor/doctorRemove.html" class="list-actions-button-delete">Remove</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Anna</td>
+                    <td>Marchewka</td>
+                    <td>Pediatra</td>
+                    <td>
+                        <ul class="list-actions">
+                            <li>
+                                <a href="doctors/details/3" class="list-actions-button-details">Details</a>
+                                <a href="/Pages/Doctor/doctorFormEdit.html" class="list-actions-button-edit">Edit</a>
+                                <a href="/Pages/Doctor/doctorRemove.html" class="list-actions-button-delete">Remove</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            <a href="doctors/add" class="button-add">Add Doctor</a>
+        </p>
+    </main>
+
+<%- include('../../fragments/footer.ejs') %>

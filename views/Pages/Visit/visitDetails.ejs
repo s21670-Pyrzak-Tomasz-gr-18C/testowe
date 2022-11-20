@@ -1,0 +1,34 @@
+<%- include('../../fragments/header.ejs') %>
+
+    <main>
+        <h2>Visit Details</h2>
+        <form class="form">
+            <label for="doctorName">Doctor:<span class="symbol-required">*</span></label>
+            <input type="text" name="doctorName" id="doctorName" value="Jan Kowalski" disabled>
+            <span id="errorDoctorName"></span>
+
+            <label for="patientName">Patient:<span class="symbol-required">*</span></label>
+            <input type="text" name="patientName" id="patientName" value="Adam Ogórek" disabled>
+            <span id="errorPatientName"></span>
+           
+            <label for="visitDate">Visit Date:<span class="symbol-required">*</span></label>
+            <input type="date" name="visitDate" id="visitDate" value="2022-11-12" disabled>
+            <span id="errorVisitDate"></span>
+
+            <label for="payer">Payer:<span class="symbol-required">*</span></label>
+            <select name="payer" id="payer" disabled>
+                <option>Select payer type</option>
+                <option value="NFZ" selected>NFZ</option>
+                <option value="Insurer">Insurer</option>
+                <option value="PrivateVisit">Private Visit</option>
+            </select>
+            <span id="errorPayer"></span>
+           
+            <div class="form-buttons">
+                <a href="/Pages/Visit/visitFormEdit.html" class="list-actions-button-edit">Edit</a>
+                <a href="/Pages/Visit/allVisits.html" class="list-actions-button-details">Back</a>
+            </div>   
+        </form>
+    </main>
+
+<%- include('../../fragments/footer.ejs') %>

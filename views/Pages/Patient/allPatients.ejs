@@ -1,0 +1,64 @@
+<%- include('../../fragments/header.ejs') %>
+
+    <main>
+        <h2>All Patients</h2>
+        <table class="table-list">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Phone Number</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Mateusz</td>
+                    <td>Gruszka</td>
+                    <td>123 456 789</td>
+                    <td>
+                        <ul class="list-actions">
+                            <li>
+                                <a href="/Pages/Patient/patientDetails.html" class="list-actions-button-details">Details</a>
+                                <a href="/Pages/Patient/patientFormEdit.html" class="list-actions-button-edit">Edit</a>
+                                <a href="/Pages/Patient/patientRemove.html" class="list-actions-button-delete">Remove</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Marta</td>
+                    <td>Pomidor</td>
+                    <td>321 654 987</td>
+                    <td>
+                        <ul class="list-actions">
+                            <li>
+                                <a href="/Pages/Patient/patientDetails.html" class="list-actions-button-details">Details</a>
+                                <a href="/Pages/Patient/patientFormEdit.html" class="list-actions-button-edit">Edit</a>
+                                <a href="/Pages/Patient/patientRemove.html" class="list-actions-button-delete">Remove</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Paweł</td>
+                    <td>Arbuz</td>
+                    <td>852 147 963</td>
+                    <td>
+                        <ul class="list-actions">
+                            <li>
+                                <a href="/Pages/Patient/patientDetails.html" class="list-actions-button-details">Details</a>
+                                <a href="/Pages/Patient/patientForm.html" class="list-actions-button-edit">Edit</a>
+                                <a href="/Pages/Patient/patientRemove.html" class="list-actions-button-delete">Remove</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            <a href="patients/add" class="button-add">Add Patient</a>
+        </p>
+    </main>
+
+<%- include('../../fragments/footer.ejs') %>

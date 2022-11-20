@@ -1,0 +1,48 @@
+<%- include('../../fragments/header.ejs') %> 
+
+    <main>
+        <h2>Patient Details</h2>
+        <form class="form">
+            <label for="firstName">First Name:<span class="symbol-required">*</span></label>
+            <input type="text" name="firstName" id="firstName" value="Mateusz" disabled>
+            <span id="errorFirstName"></span>
+           
+            <label for="lastName">Last Name:<span class="symbol-required">*</span></label>
+            <input type="text" name="lastName" id="lastName" value="Gruszka" disabled>
+            <span id="errorLastName"></span>
+           
+            <label for="phoneNumber">Phone Number:<span class="symbol-required">*</span></label>
+            <input type="number" name="phoneNumber" id="phoneNumber" value="587756354" disabled>
+            <span id="errorPhoneNumber"></span>  
+        </form>
+        <div class="form-buttons">
+            <a href="/Pages/Patient/patientFormEdit.html" class="list-actions-button-edit">Edit</a>
+        </div> 
+        <h2>Visits Details</h2>
+        <table class="table-list">
+        <thead>
+            <tr>
+                <th>Doctor</th>
+                <th>Visit Date</th>
+                <th>Payer</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Jan Kowalski</td>
+                <td>15.12.2024</td>
+                <td>NFZ</td>
+            </tr>
+            <tr>
+                <td>Adam Nowak</td>
+                <td>07.11.2022</td>
+                <td>Private Visit</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="form-buttons">
+        <a href="/Pages/Patient/allPatients.html" class="list-actions-button-details">Back</a>
+    </div> 
+    </main>
+
+<%- include('../../fragments/footer.ejs') %>

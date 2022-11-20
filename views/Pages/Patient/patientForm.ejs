@@ -1,0 +1,27 @@
+<%- include('../../fragments/header.ejs') %>
+ 
+    <main>
+        <h2>New Patient</h2>
+        <form class="form" novalidate onsubmit="return validatePatientForm();">
+            <label for="firstName">First Name:<span class="symbol-required">*</span></label>
+            <input type="text" name="firstName" id="firstName" placeholder="2-60 znaków" required>
+            <span id="errorFirstName" class="errors-text"></span>
+           
+            <label for="lastName">Last Name:<span class="symbol-required">*</span></label>
+            <input type="text" name="lastName" id="lastName" placeholder="2-60 znaków" required>
+            <span id="errorLastName" class="errors-text"></span>
+           
+            <label for="phoneNumber">Phone Number:<span class="symbol-required">*</span></label>
+            <input type="text" name="phoneNumber" id="phoneNumber" required>
+            <span id="errorPhoneNumber" class="errors-text"></span>
+           
+            <div class="form-buttons">
+                <p id="errorsSummary" class="errors-text"></p>
+                <input type="submit" value="Add New Patient" class="form-button-submit">
+                <a href="/" class="form-button-cancel">Cancel</a>
+            </div>   
+        </form>
+    </main>
+    <script type="application/javascript" src="/js/validationCommon.js"></script>
+    <script type="application/javascript" src="/js/validationPatientForm.js"></script>
+<%- include('../../fragments/footer.ejs') %>

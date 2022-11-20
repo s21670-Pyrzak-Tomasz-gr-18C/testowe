@@ -1,0 +1,48 @@
+<%- include('../../fragments/header.ejs') %>
+
+    <main>
+        <h2>Doctor Details</h2>
+        <form class="form">
+            <label for="firstName">First Name:<span class="symbol-required">*</span></label>
+            <input type="text" name="firstName" id="firstName" value="Jan" disabled>
+            <span id="errorFirstName"></span>
+           
+            <label for="lastName">Last Name:<span class="symbol-required">*</span></label>
+            <input type="text" name="lastName" id="lastName" value="Kowalski" disabled>
+            <span id="errorLastName"></span>
+           
+            <label for="specialization">Specialization:<span class="symbol-required">*</span></label>
+            <input type="text" name="specialization" id="specialization" value="Kardiolog" disabled>
+            <span id="errorSpecialization"></span>  
+        </form>
+        <div class="form-buttons">
+            <a href="/Pages/Doctor/doctorFormEdit.html" class="list-actions-button-edit">Edit</a>
+        </div> 
+        <h2>Visits Details</h2>
+        <table class="table-list">
+        <thead>
+            <tr>
+                <th>Patient </th>
+                <th>Visit Date</th>
+                <th>Payer</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Marcin Kalafior</td>
+                <td>15.12.2024</td>
+                <td>NFZ</td>
+            </tr>
+            <tr>
+                <td>Anna Kapusta</td>
+                <td>07.11.2022</td>
+                <td>Private Visit</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="form-buttons">
+        <a href="/Pages/Doctor/allDoctors.html" class="list-actions-button-details">Back</a>
+    </div> 
+    </main>
+
+<%- include('../../fragments/footer.ejs') %>

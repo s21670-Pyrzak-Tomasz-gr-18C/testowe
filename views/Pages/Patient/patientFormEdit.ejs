@@ -1,0 +1,26 @@
+<%- include('../../fragments/header.ejs') %>
+
+    <main>
+        <h2>Edit Patient</h2>
+        <form class="form" action="/Pages/Patient/patientEditedMessage.html">
+            <label for="firstName">First Name:<span class="symbol-required">*</span></label>
+            <input type="text" name="firstName" id="firstName" value="Mateusz" required>
+            <span id="errorFirstName" class="errors-text"></span>
+           
+            <label for="lastName">Last Name:<span class="symbol-required">*</span></label>
+            <input type="text" name="lastName" id="lastName" value="Gruszka" required>
+            <span id="errorLastName" class="errors-text"></span>
+           
+            <label for="phoneNumber">Phone Number:<span class="symbol-required">*</span></label>
+            <input type="number" name="phoneNumber" id="phoneNumber" value="587756354" required>
+            <span id="errorPhoneNumber" class="errors-text"></span>
+
+            <div class="form-buttons">
+                <p id="errorsSummary"></p>
+                <input type="submit" value="Save" class="form-button-submit">
+                <a href="/index.html" class="form-button-cancel">Cancel</a>
+            </div>   
+        </form>
+    </main>
+
+<%- include('../../fragments/footer.ejs') %>
